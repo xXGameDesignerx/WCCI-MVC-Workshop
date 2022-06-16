@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basketball MVC", "Basketball MVC\Basketball MVC.csproj", "{1EDA1B66-B419-47AC-ADD9-B16F23154C5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EDA1B66-B419-47AC-ADD9-B16F23154C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDA1B66-B419-47AC-ADD9-B16F23154C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDA1B66-B419-47AC-ADD9-B16F23154C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDA1B66-B419-47AC-ADD9-B16F23154C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56D77C28-6F24-4714-85AB-62809F02BF1D}
+	EndGlobalSection
+EndGlobal
