@@ -2,8 +2,8 @@
 {
     public class Position
     {
-        public int Id;
-        public string Name;
+        public int Id { get; set; }
+        public string Name { get; set; }
         //public List<Player> Players;
 
         public Position(string name) // List<Player> players)
