@@ -5,7 +5,10 @@ namespace Basketball_MVC
 {
     public class BasketballContext : DbContext
     {
-        public DbSet<Position> Position { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<PlayerPosition> PlayerPositions { get; set; }
+        public DbSet<Player> Players { get; set; }
+        public DbSet<Team> Teams { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // three things to specify: connection string, we tell the options builder to use that connection string
@@ -23,6 +26,22 @@ namespace Basketball_MVC
                 new Position() { Id = 3, Name = "Small Forward" },
                 new Position() { Id = 4, Name = "Power Forward" },
                 new Position() { Id = 5, Name = "Center" }
+                );
+            modelBuilder.Entity<Player>().HasData(
+                new Player() { Id = 1, Name = "Keven Love", PPG = 10.4, IsRetired = false },
+                new Player() { Id = 2, Name = "Colin Sexton", PPG = 19.3, IsRetired = false }
+                );
+            modelBuilder.Entity<PlayerPosition>().HasData(
+                new PlayerPosition() { Id = 1, PlayerId = 1, PositionId = 4},
+                new PlayerPosition() { Id = 2, PlayerId = 1, PositionId = 5},
+                new PlayerPosition() { Id = 3, PlayerId = 2, PositionId = 1},
+                new PlayerPosition() { Id = 4, PlayerId = 2, PositionId = 2}
+                );
+            modelBuilder.Entity<Team>().HasData(
+                new Team() { Id = 1, City = "Cleveland", Name = "Cavs", Mascot = "Moondog"}
+                );
+            modelBuilder.Entity<Coach>().HasData(
+                new Coach() { Id = 1, TeamId = 1, Name = "J. B. Bickerstaff", FavoriteFood = "Pierogies", StartYear = DateTime.Now, Wins = 44, Losses = 38}
                 );
         }
     }

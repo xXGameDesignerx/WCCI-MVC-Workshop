@@ -1,5 +1,6 @@
 ﻿using Basketball_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq; // looking for an obj in particular/ 'querying' or searching
 
 namespace Basketball_MVC.Controllers
 {
@@ -13,7 +14,12 @@ namespace Basketball_MVC.Controllers
 
         public IActionResult Index()
         {
-            return View(db.Position.ToList());
+            return View(db.Positions.ToList());
+        }
+
+        public IActionResult Details(int id)
+        {
+            return View(db.Positions.ToList().Where(p => p.Id == id).FirstOrDefault());
         }
     }
 }
