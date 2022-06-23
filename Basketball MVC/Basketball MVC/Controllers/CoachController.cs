@@ -15,6 +15,10 @@ namespace Basketball_MVC.Controllers
         {
             return View(db.Coaches.ToList());
         }
+        public IActionResult Details(int id)
+        {
+            return View(db.Coaches.ToList().Where(c => c.Id == id).FirstOrDefault());
+        }
         public IActionResult Create()
         {
             return View(new Coach());
@@ -33,6 +37,22 @@ namespace Basketball_MVC.Controllers
                 }
             }
             db.Coaches.Add(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public IActionResult Update(int id)
+        {
+            Coach coach = db.Coaches.Find(id);
+            if(coach == null)
+            {
+                return View("Error");
+            }
+            return View(coach);
+        }
+        [HttpPost]
+        public IActionResult Update(Coach model)
+        {
+            db.Coaches.Update(model);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
