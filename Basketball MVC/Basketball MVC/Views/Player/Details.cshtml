@@ -1,4 +1,4 @@
-﻿@model Basketball_MVC.Models.Team
+﻿@model Basketball_MVC.Models.Player
 
 @{
     ViewData["Title"] = "Details";
@@ -7,7 +7,7 @@
 <h1>Details</h1>
 
 <div>
-    <h4>Team</h4>
+    <h4>Player</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -17,26 +17,25 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.City)
+            @Html.DisplayNameFor(model => model.Team)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.City)
+            @Html.DisplayFor(model => model.Team.Id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Coach)
+            @Html.DisplayNameFor(model => model.PPG)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Coach.Id)
+            @Html.DisplayFor(model => model.PPG)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Mascot)
+            @Html.DisplayNameFor(model => model.IsRetired)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Mascot)
+            @Html.DisplayFor(model => model.IsRetired)
         </dd>
     </dl>
 </div>
- 
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>

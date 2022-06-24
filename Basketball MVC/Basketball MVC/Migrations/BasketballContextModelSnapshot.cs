@@ -58,7 +58,7 @@ namespace Basketball_MVC.Migrations
                             FavoriteFood = "Pierogies",
                             Losses = 38,
                             Name = "J. B. Bickerstaff",
-                            StartYear = new DateTime(2022, 6, 23, 11, 33, 16, 796, DateTimeKind.Local).AddTicks(5204),
+                            StartYear = new DateTime(2022, 6, 24, 10, 43, 1, 422, DateTimeKind.Local).AddTicks(8319),
                             Wins = 44
                         });
                 });

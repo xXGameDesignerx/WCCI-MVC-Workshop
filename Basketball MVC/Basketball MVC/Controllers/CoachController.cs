@@ -56,5 +56,17 @@ namespace Basketball_MVC.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(int id)
+        {
+            Coach coach = db.Coaches.Find(id);
+            return View(coach);
+        }
+        [HttpPost]
+        public IActionResult Delete(Coach model)
+        {
+            db.Coaches.Remove(model);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
